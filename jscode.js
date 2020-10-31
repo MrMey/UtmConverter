@@ -3,7 +3,7 @@ function ConvertToDeg(){
     var northing = document.getElementById("input_northing").value;
     var easting = document.getElementById("input_easting").value;
     try {
-        var utm = new UTMConv.UTMCoords(utmz, northing, easting);
+        var utm = new UTMConv.UTMCoords(utmz, easting, northing);
         var deg = utm.to_deg();
         document.getElementById("output_lat").innerHTML = deg.latd;
         document.getElementById("output_lon").innerHTML = deg.lngd;
