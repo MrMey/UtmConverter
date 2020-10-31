@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UTM converter</title>
+        <script type="text/javascript" src="utmconv.js"></script>
+        <script type="text/javascript" src="jscode.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no">
+    </head>
+    
+    <body>
+        <h1>Coordinate converter</h1>
+        <h2>UTM > Lat/Lon</h2>
+        <label for="input_utmz">utmz</label>
+        <input type="number" id="input_utmz" name="input_utmz"> 
+        <label for="northing">northing</label>
+        <input type="number" id="input_northing" name="input_northing">
+        <label for="input_easting">easting</label>
+        <input type="number" id="input_easting" name="input_easting">
+        <button id="convert_button" onclick="ConvertToDeg()">Convert</button>
+        <div id="output_lat"></div>
+        <div id="output_lon"></div>
+        <div id="deg2utm_logs"></div>
+
+        <h2>Lat/Lon > UTM</h2>
+        <label for="input_lat">lat</label>
+        <input type="number" id="input_lat" name="input_lat"> 
+        <label for="input_lng">lng</label>
+        <input type="number" id="input_lng" value="input_lng">
+        
+        <button id="convert_button" onclick="ConvertToUtm()">Convert</button>
+        <div id="output_utmz"></div>
+        <div id="output_northing"></div>
+        <div id="output_easting"></div>
+        <div id="utm2deg_logs"></div>
+
+        <h2>Find the place on OpenStreetMap</h2>
+        <a id="osm_url" target="_blank" rel="noopener noreferrer"></a>
+    </body>
+</html>
+
